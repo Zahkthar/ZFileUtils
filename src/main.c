@@ -47,6 +47,9 @@ int main(int argc, char **argv) {
             // Check if there are some options flags in the future
             
             ZIsFilesEqualFunction(filePath1, filePath2);
+        } else {
+            ZPrintCommandUsage();
+            return 0;
         }
     }
 
