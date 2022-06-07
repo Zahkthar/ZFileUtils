@@ -4,7 +4,7 @@
 #include "ZFileUtilsFunctions.h"
 
 #define MAX_FUNCTION_PARAMETER_SIZE 21
-#define MAX_FILE_PATH_BUFFER_MAX 200
+#define MAX_FILE_PATH_BUFFER_SIZE 200
 
 int main(int argc, char **argv) {
     if(argc == 1) {
@@ -28,21 +28,21 @@ int main(int argc, char **argv) {
         } else if(strncmp(functionBuffer, "-isFilesEqual", MAX_FUNCTION_PARAMETER_SIZE) == 0) {
             if(argc < 4) { ZPrintCommandUsage(); return 0; }
 
-            if(strnlen(argv[2], MAX_FILE_PATH_BUFFER_MAX) == MAX_FILE_PATH_BUFFER_MAX) {
+            if(strnlen(argv[2], MAX_FILE_PATH_BUFFER_SIZE) == MAX_FILE_PATH_BUFFER_SIZE) {
                 fprintf(stderr, "Error : Maximum %d characters for the filePath1 parameter\n", (MAX_FUNCTION_PARAMETER_SIZE - 1));
                 return 0;
             }
 
-            if(strnlen(argv[3], MAX_FILE_PATH_BUFFER_MAX) == MAX_FILE_PATH_BUFFER_MAX) {
+            if(strnlen(argv[3], MAX_FILE_PATH_BUFFER_SIZE) == MAX_FILE_PATH_BUFFER_SIZE) {
                 fprintf(stderr, "Error : Maximum %d characters for the filePath2 parameter\n", (MAX_FUNCTION_PARAMETER_SIZE - 1));
                 return 0; 
             }
 
-            char filePath1[MAX_FILE_PATH_BUFFER_MAX];
-            char filePath2[MAX_FILE_PATH_BUFFER_MAX];
+            char filePath1[MAX_FILE_PATH_BUFFER_SIZE];
+            char filePath2[MAX_FILE_PATH_BUFFER_SIZE];
 
-            strncpy(filePath1, argv[2], MAX_FILE_PATH_BUFFER_MAX);
-            strncpy(filePath2, argv[3], MAX_FILE_PATH_BUFFER_MAX);
+            strncpy(filePath1, argv[2], MAX_FILE_PATH_BUFFER_SIZE);
+            strncpy(filePath2, argv[3], MAX_FILE_PATH_BUFFER_SIZE);
 
             // Check if there are some options flags in the future
             
