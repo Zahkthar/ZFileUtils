@@ -9,12 +9,12 @@ void ZPrintCommandUsage() {
  * Functions called by -help parameter
  */
 void ZHelpFunction() {
-    printf("+---------------------------------------------------+\n");
-    printf("|  [-function]  |     [parameters]     | [-options] |\n");
-    printf("+---------------------------------------------------+\n");
-    printf("|    -help      |                      |            |\n");
-    printf("| -isFilesEqual |  filePath1 filePath2 |            |\n");
-    printf("+---------------------------------------------------+\n");
+    printf("+----------------------------------------------------+\n");
+    printf("|  [-function]  |      [parameters]     | [-options] |\n");
+    printf("+----------------------------------------------------+\n");
+    printf("|     -help     |                       |            |\n");
+    printf("| -isFilesEqual |  filePath1 filePath2  |            |\n");
+    printf("+----------------------------------------------------+\n");
 }
 
 /*
