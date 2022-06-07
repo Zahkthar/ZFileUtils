@@ -4,7 +4,7 @@
 #include "ZFileUtilsFunctions.h"
 
 #define MAX_FUNCTION_PARAMETER_SIZE 21
-#define MAX_FILE_PATH_BUFFER_MAX 100
+#define MAX_FILE_PATH_BUFFER_MAX 200
 
 int main(int argc, char **argv) {
     if(argc == 1) {
