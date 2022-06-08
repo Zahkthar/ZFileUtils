@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 
         if(strncmp(functionBuffer, "-help", MAX_FUNCTION_PARAMETER_SIZE) == 0) {
             ZHelpFunction();
-        } else if(strncmp(functionBuffer, "-isFilesEqual", MAX_FUNCTION_PARAMETER_SIZE) == 0) {
+        } else if(strncmp(functionBuffer, "-isFilesIdentical", MAX_FUNCTION_PARAMETER_SIZE) == 0) {
             if(argc < 4) { ZPrintCommandUsage(); return 0; }
 
             if(strnlen(argv[2], MAX_FILE_PATH_BUFFER_SIZE) == MAX_FILE_PATH_BUFFER_SIZE) {
@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
 
             // Check if there are some options flags in the future
             
-            ZIsFilesEqualFunction(filePath1, filePath2);
+            ZIsFilesIdenticalFunction(filePath1, filePath2);
         } else {
             ZPrintCommandUsage();
             return 0;

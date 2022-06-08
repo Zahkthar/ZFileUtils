@@ -9,18 +9,18 @@ void ZPrintCommandUsage() {
  * Functions called by -help parameter
  */
 void ZHelpFunction() {
-    printf("+----------------------------------------------------+\n");
-    printf("|  [-function]  |      [parameters]     | [-options] |\n");
-    printf("+----------------------------------------------------+\n");
-    printf("|     -help     |                       |            |\n");
-    printf("| -isFilesEqual |  filePath1 filePath2  |            |\n");
-    printf("+----------------------------------------------------+\n");
+    printf("+--------------------------------------------------------+\n");
+    printf("|    [-function]    |      [parameters]     | [-options] |\n");
+    printf("+--------------------------------------------------------+\n");
+    printf("|       -help       |                       |            |\n");
+    printf("| -isFilesIdentical |  filePath1 filePath2  |            |\n");
+    printf("+--------------------------------------------------------+\n");
 }
 
 /*
  * Functions called by -isFilesEqual parameter
  */
-void ZIsFilesEqualFunction(char *filePath1, char *filePath2) {
+void ZIsFilesIdenticalFunction(char *filePath1, char *filePath2) {
     // Open thoses files
     FILE *file1 = fopen(filePath1, "rb");
     FILE *file2 = fopen(filePath2, "rb");
